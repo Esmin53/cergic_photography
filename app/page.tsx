@@ -9,7 +9,7 @@ import { HOMEPAGE_DISPLAY_ARRAYS } from "@/utils/data";
 import { useState } from "react";
 
 export default function Home() {
-  let [theme, setTheme] = useState("dark")
+  const [theme, setTheme] = useState("dark")
 
   return (
     <div className={`flex flex-col flex-1 bg-background text-text text-base font-mono min-h-screen ${theme}`}>

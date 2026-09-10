@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Allura, Cormorant_Garamond, Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { Allura, Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({

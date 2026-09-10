@@ -5,7 +5,7 @@ import Image from 'next/image'
 interface DisplayCardsProps {
   images_array: string[]
   banner: string
-  inverted: Boolean
+  inverted: boolean
   title: string
 }
 
