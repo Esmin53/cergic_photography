@@ -7,7 +7,7 @@ import { HOMEPAGE_DISPLAY_ARRAYS } from "@/utils/data";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 font-sans bg-background text-text min-h-screen">
+    <div className="flex flex-col flex-1 bg-background text-text text-base font-mono min-h-screen">
         
         <Navbar />
         <Banner />
