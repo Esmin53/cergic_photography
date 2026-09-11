@@ -7,16 +7,17 @@ interface DisplayCardsProps {
   banner: string
   inverted: boolean
   title: string
+  _id: string
 }
 
-const HomepageDisplayCards = ({images_array, banner, inverted, title}: DisplayCardsProps) => {
+const HomepageDisplayCards = ({images_array, banner, inverted, title, _id}: DisplayCardsProps) => {
   return (
     <MaxWidthWrapper background_color={null}>
-      <div className='flex flex-col w-full h-full'>
-        <div className={`flex flex-col w-full py-2 ${inverted ? "items-end" : "items-start"}`}>
-          <h1 className='font-script text-4xl'>{title}</h1>
-          <div className='h-0.5 w-3/4 bg-text' />
-          <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nulla possimus error!</p>
+      <div className='flex flex-col w-full h-full' id={_id}>
+        <div className={`flex w-full py-2 items-center justify-between gap-4 sm:gap-12`}>
+          <div className='h-0.75 flex-1 bg-text' />
+          <h1 className='font-script text-5xl'>{title}</h1>
+          <div className='h-0.75 flex-1 bg-text' />
         </div>
 
         <div className={`flex w-full py-2 gap-1.5 xl:gap-4 h-full flex-col-reverse ${inverted ? "sm:flex-row" : "sm:flex-row-reverse"}`}>

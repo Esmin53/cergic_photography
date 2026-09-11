@@ -9,8 +9,8 @@
   --color-secondary: #6366f1;
   --color-accent: #7b2cbf;
   --color-text: #222831;
-  --color-background: #f7f5eb;
-  --color-foreground: #E5EEE4;
+  --color-background:	#fafafa;
+  --color-foreground: #e4e5f1;
 }
 
 /* 3. Dark Theme Overrides (Applied when next-themes toggles the .dark class) */
@@ -18,9 +18,10 @@
   --color-primary: #818cf8;
   --color-secondary: #a5b4fc;
   --color-accent: #7b2cbf;
-  --color-text: #EEEEEE;
-  --color-background: #31363F;
-  --color-foreground: #222831;
+  --color-text: #e2e8f0;
+  --color-foreground: #121212;
+  --color-background: #1e1e1e;
+
 }
 
 /* 4. Map CSS Variables into Tailwind Theme System */
