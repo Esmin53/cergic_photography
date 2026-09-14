@@ -20,9 +20,9 @@ export default function Home() {
         <AboutMe />
         <Prices />
         <div className="flex flex-col flex-1 py-6 items-center">
-          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.weddings.images} banner={HOMEPAGE_DISPLAY_ARRAYS.weddings.banner} inverted={false} title="Svadbe" _id="svadbe"/>
-          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.portraits.images} banner={HOMEPAGE_DISPLAY_ARRAYS.portraits.banner} inverted={true} title="Portreti" _id="portreti"/>
-          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.nature.images} banner={HOMEPAGE_DISPLAY_ARRAYS.nature.banner} inverted={false} title="Eventi" _id="eventi"/>
+          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.weddings.images} banner={HOMEPAGE_DISPLAY_ARRAYS.weddings.banner} inverted={false} title="Svadbe" _id="svadbe" category="svadbe"/>
+          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.portraits.images} banner={HOMEPAGE_DISPLAY_ARRAYS.portraits.banner} inverted={true} title="Portreti" _id="portreti" category="portreti"/>
+          <HomepageDisplayCards images_array={HOMEPAGE_DISPLAY_ARRAYS.nature.images} banner={HOMEPAGE_DISPLAY_ARRAYS.nature.banner} inverted={false} title="Eventi" _id="eventi" category="eventi"/>
         </div>
         <Footer />
 
