@@ -42,7 +42,7 @@ const Banner = () => {
   return (
     <MaxWidthWrapper background_color={"foreground"}>
         { data.length > 0 ?<div className='w-full bg-foreground grid sm:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4 relative pb-12 sm:pb-16'>
-            {data.map((item) => <UpdateImageForm slot={1} category='banner' imageUrl={item.imageUrl} key={item.id} titleProp={item.title} colorProp={item.color}/>)}            
+            {data.map((item, i) => <UpdateImageForm slot={i + 1} category='banner' imageUrl={item.imageUrl} key={item.id} titleProp={item.title} colorProp={item.color}/>)}            
         </div> : <div className='w-full bg-foreground grid grid-cols-3 gap-4 relative pt-8 pb-12 sm:pb-16'>
                 <BannerSkeleton />
                 <BannerSkeleton />
