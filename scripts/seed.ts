@@ -31,7 +31,6 @@ async function seedAdmin() {
 
     console.log(`✅ Admin user created successfully: ${adminName}`);
   } catch (error: unknown) {
-    // Cast error to standard Error type or check for PostgreSql/Drizzle properties safely
     const err = error as { code?: string; message?: string };
 
     if (err.code === '23505') {

@@ -1,4 +1,4 @@
-import { pgTable, text, integer, timestamp, uniqueIndex, serial } from 'drizzle-orm/pg-core';
+import { pgTable, text, integer, timestamp, uniqueIndex, serial, numeric } from 'drizzle-orm/pg-core';
 
 export const landingImages = pgTable(
   'landing_images',
@@ -23,3 +23,10 @@ export const users = pgTable('users', {
   role: text('role').default('admin').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
+
+export const prices = pgTable('prices', {
+  id: serial('id').primaryKey(),
+  name: text("name").notNull().unique(),
+  price: numeric('price').notNull()
+
+})
