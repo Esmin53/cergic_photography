@@ -1,4 +1,4 @@
-import { pgTable, text, integer, timestamp, uniqueIndex } from 'drizzle-orm/pg-core';
+import { pgTable, text, integer, timestamp, uniqueIndex, serial } from 'drizzle-orm/pg-core';
 
 export const landingImages = pgTable(
   'landing_images',
@@ -15,3 +15,11 @@ export const landingImages = pgTable(
     uniqueIndex('category_slot_idx').on(table.category, table.slotNumber),
   ]
 );
+
+export const users = pgTable('users', {
+  id: serial('id').primaryKey(),
+  name: text('name').notNull().unique(),
+  password: text('password').notNull(),
+  role: text('role').default('admin').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
