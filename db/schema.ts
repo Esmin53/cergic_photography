@@ -30,3 +30,15 @@ export const prices = pgTable('prices', {
   price: numeric('price').notNull()
 
 })
+
+export const contact = pgTable('contact', {
+  id: serial('id').primaryKey(),
+  description: text("description").notNull(),
+  equipment: text("equipment").notNull(),
+  location: text("location").notNull(),
+  instagram: text("instagram").notNull(),
+  instagram_link: text("instagram_link").notNull(),
+  facebook: text("facebook").notNull(),
+  facebook_link: text("facebook_link").notNull(),
+  cellphone: text("cellphone").notNull(),
+})

@@ -1,7 +1,7 @@
 "use client"
 
 import MaxWidthWrapper from './MaxWidthWrapper'
-import { FaFacebook, FaInstagram, FaLinkedin, FaMoon, FaPinterest, FaSun } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaMoon, FaPinterest, FaSun } from "react-icons/fa";
 
 interface NavbarProps {
   setTheme: (theme: string) => void;
@@ -20,7 +20,7 @@ const Navbar = ({ setTheme, theme }: NavbarProps) => {
 
   return (
     <MaxWidthWrapper background_color={"foreground"}>
-        <div className='w-full flex flex-col py-3 sm:py-6 font-mono'>
+        <div className='w-full flex flex-col py-3 sm:py-6 font-mono relative'>
             <div className='w-full flex flex-col items-center justify-center'>
                 <h1 className='text-3xl sm:text-5xl font-script pb-3 sm:pb-6 font-semibold'>Majid Čergić <br /> Photography</h1>
                 <div className='w-2/3 mx-auto h-0.5 rounded-full bg-text sm:my-3' />
@@ -30,14 +30,21 @@ const Navbar = ({ setTheme, theme }: NavbarProps) => {
                     <p className='cursor-pointer text-sm sm:text-lg ease-in-out duration-200 hover:-mt-1' onClick={() => handleScroll("portreti")}>Portreti</p>
                     <p className='cursor-pointer text-sm sm:text-lg ease-in-out duration-200 hover:-mt-1' onClick={() => handleScroll("eventi")}>Eventi</p>
                     <p className='cursor-pointer text-sm sm:text-lg ease-in-out duration-200 hover:-mt-1' onClick={() => handleScroll("kontakt")}>Kontakt</p>
-                    <p className='cursor-pointer text-sm sm:text-lg ease-in-out duration-200 hover:-mt-1' onClick={() => handleScroll("cijene")}>Cijene</p>
+                    {/* <p className='cursor-pointer text-sm sm:text-lg ease-in-out duration-200 hover:-mt-1' onClick={() => handleScroll("cijene")}>Cijene</p> */}
                 </div>
                 <div className='flex items-center gap-6'>
-                    <FaFacebook className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>
+                     <a href='https://www.facebook.com/majid.cergic.2025' target='_blank'>
+                        <FaFacebook className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>
+                     </a>
                      <a href='https://www.instagram.com/cergicphotography/' target='_blank'>
                         <FaInstagram className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>
                      </a>
-                    <FaPinterest className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>
+                    <a 
+                    href="mailto:majidcergic02@gmail.com" 
+                    className="hover:underline"
+                    >
+                        <FaEnvelope className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>
+                    </a>
                     <button onClick={() => setTheme(theme == "dark" ? "light" : "dark")}>
                         {theme == "dark" ? <FaSun className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/> : <FaMoon className='text-2xl cursor-pointer ease-in-out duration-200 hover:-mt-1'/>}
                     </button>

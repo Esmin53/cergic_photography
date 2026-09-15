@@ -1,13 +1,23 @@
 "use server";
 
 import { db } from "@/db";
-import { prices } from "@/db/schema";
+import { contact, prices } from "@/db/schema";
 import { desc, eq } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 
 export async function getPricesData() {
   try {
     const data = await db.select().from(prices).orderBy(desc(prices.price));
+    return { data, error: null };
+  } catch (error) {
+    console.error("Failed to fetch prices:", error);
+    return { data: null, error: "Failed to fetch prices" };
+  }
+}
+
+export async function getMajidData() {
+  try {
+    const data = await db.select().from(contact);
     return { data, error: null };
   } catch (error) {
     console.error("Failed to fetch prices:", error);
